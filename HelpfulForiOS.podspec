@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   
   s.subspec "ALCache" do |cs|
     cs.source_files =  "ALCache"
-    cs.dependency "FMDB", :git => "https://github.com/ccgus/fmdb"
+    cs.dependency "FMDB"
   end
   
 end
