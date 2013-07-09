@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.author       = { "Ivanenko Dmitry" => "id.noxt@gmail.com" }
   s.source       = { :git => "https://github.com/noxt/Helpful-For-iOS" }
   s.platform     = :ios, '5.0'
-  s.source_files = "NSDictionary+Merge"
   s.requires_arc = true
   
 
@@ -22,7 +21,7 @@ Pod::Spec.new do |s|
   
   s.subspec "ALCache" do |cs|
     cs.source_files =  "ALCache"
-    cs.dependency   = "FMDB"
+    cs.dependency   = "FMDB", :git => "https://github.com/ccgus/fmdb"
   end
   
 end
