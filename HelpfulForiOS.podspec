@@ -6,10 +6,11 @@
 #
 Pod::Spec.new do |s|
   s.name         = "HelpfulForiOS"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.author       = { "Ivanenko Dmitry" => "id.noxt@gmail.com" }
   s.source       = { :git => "https://github.com/noxt/Helpful-For-iOS" }
   s.platform     = :ios, '5.0'
-  s.source_files = 'NSDictionary+Merge'
+  s.source_files = 'NSDictionary+Merge', 'ALCache'
   s.requires_arc = true
+  s.dependency	 = 'FMDB'
 end
