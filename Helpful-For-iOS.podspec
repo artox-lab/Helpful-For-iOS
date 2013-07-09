@@ -5,7 +5,7 @@
 # To learn more about the attributes see http://docs.cocoapods.org/specification.html
 #
 Pod::Spec.new do |s|
-  s.name         = "Helpful-For-iOS"
+  s.name         = "HelpfulForiOS"
   s.version      = "0.0.2"
   s.author       = { "Ivanenko Dmitry" => "id.noxt@gmail.com" }
   s.source       = { :git => "https://github.com/noxt/Helpful-For-iOS" }
