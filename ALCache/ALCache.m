@@ -49,14 +49,14 @@ NSString *const DatabaseFileName = @"Cache.sqlite";
     [self->_database executeUpdate:@"CREATE TABLE IF NOT EXISTS `cache_data` (`name` text primary key, `value` text, `expire_date` integer)"];
 }
 
-- (void)setValue:(NSString *)value forName:(NSString *)name withCacheDuration:(int)cacheDuration
+- (void)setValue:(NSString *)value forName:(NSString *)name withCacheDuration:(NSTimeInterval)secs
 {
-    NSNumber *expireTimestamp = @((int) [[NSDate date] timeIntervalSince1970] + cacheDuration);
+    NSDate *expireDate = [NSDate dateWithTimeIntervalSinceNow:secs];
 
     NSDictionary *params = @{
             @"name" : name,
             @"value" : value,
-            @"expire_date" : expireTimestamp
+            @"expire_date" : [expireDate timeIntervalSince1970]
     };
     [self->_database executeUpdate:@"INSERT OR REPLACE INTO `cache_data` VALUES (:name, :value, :expire_date)" withParameterDictionary:params];
 }
