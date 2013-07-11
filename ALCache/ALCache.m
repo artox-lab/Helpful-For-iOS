@@ -56,7 +56,7 @@ NSString *const DatabaseFileName = @"Cache.sqlite";
     NSDictionary *params = @{
             @"name" : name,
             @"value" : value,
-            @"expire_date" : [expireDate timeIntervalSince1970]
+            @"expire_date" : @([expireDate timeIntervalSince1970])
     };
     [self->_database executeUpdate:@"INSERT OR REPLACE INTO `cache_data` VALUES (:name, :value, :expire_date)" withParameterDictionary:params];
 }
