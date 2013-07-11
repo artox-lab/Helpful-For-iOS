@@ -41,15 +41,12 @@ NSString *const DatabaseFileName = @"Cache.sqlite";
 
     [self->_database open];
 
-    if (![[NSFileManager defaultManager] fileExistsAtPath:dbPath])
-    {
-        [self createTable];
-    }
+    [self createTable];
 }
 
 - (void)createTable
 {
-    [self->_database executeUpdate:@"CREATE TABLE `cache_data` (`name` text primary key, `value` text, `expire_date` integer)"];
+    [self->_database executeUpdate:@"CREATE TABLE IF NOT EXISTS `cache_data` (`name` text primary key, `value` text, `expire_date` integer)"];
 }
 
 - (void)setValue:(NSString *)value forName:(NSString *)name withCacheDuration:(int)cacheDuration
