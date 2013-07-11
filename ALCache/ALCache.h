@@ -13,7 +13,7 @@
 
 + (id)sharedInstance;
 
-- (void)setValue:(NSString *)value forName:(NSString *)name withCacheDuration:(int)cacheDuration;
+- (void)setValue:(NSString *)value forName:(NSString *)name withCacheDuration:(NSTimeInterval)secs;
 
 - (NSString *)valueForName:(NSString *)name;
 
