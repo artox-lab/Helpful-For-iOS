@@ -23,5 +23,9 @@ Pod::Spec.new do |s|
     cs.source_files =  "ALCache"
     cs.dependency "FMDB"
   end
+
+  s.subspec "UIImage+Color" do |ms|
+    ms.source_files =  "UIImage+Color"
+  end
   
 end
