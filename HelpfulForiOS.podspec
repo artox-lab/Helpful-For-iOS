@@ -34,6 +34,5 @@ Pod::Spec.new do |s|
   
   s.subspec "NSDictionary+URLParams" do |ms|
     ms.source_files =  "NSDictionary+URLParams"
-    ms.dependency "NSString+URLEncode"
   end
 end
