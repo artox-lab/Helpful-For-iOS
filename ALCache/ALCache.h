@@ -17,4 +17,6 @@
 
 - (NSString *)valueForName:(NSString *)name;
 
+- (void)removeValueForName:(NSString *)name;
+
 @end

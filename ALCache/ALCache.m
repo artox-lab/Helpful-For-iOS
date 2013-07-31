@@ -78,6 +78,14 @@ NSString *const DatabaseFileName = @"Cache.sqlite";
     return nil;
 }
 
+- (void)removeValueForName:(NSString *)name
+{
+    NSDictionary *params = @{
+            @"name" : name
+    };
+    [self->_database executeUpdate:@"DELETE FROM `cache_data` WHERE `name` = :name" withParameterDictionary:params];
+}
+
 - (void)dealloc
 {
     [self->_database close];
