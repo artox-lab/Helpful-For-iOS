@@ -27,13 +27,13 @@ Pod::Spec.new do |s|
   s.subspec "UIImage+Color" do |ms|
     ms.source_files =  "UIImage+Color"
   end
+
+  s.subspec "NSString+URLEncode" do |ms|
+    ms.source_files =  "NSString+URLEncode"
+  end
   
   s.subspec "NSDictionary+URLParams" do |ms|
     ms.source_files =  "NSDictionary+URLParams"
     ms.dependency "NSString+URLEncode"
-  end
-
-  s.subspec "NSString+URLEncode" do |ms|
-    ms.source_files =  "NSString+URLEncode"
   end
 end
