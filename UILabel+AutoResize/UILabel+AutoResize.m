@@ -10,6 +10,19 @@
 
 @implementation UILabel (AutoResize)
 
+- (void)trimFreeSpace
+{
+    CGSize textSize = [self.text sizeWithFont:self.font
+                            constrainedToSize:self.frame.size
+                                lineBreakMode:self.lineBreakMode];
+    
+    self.frame = CGRectMake(self.frame.origin.x,
+                            self.frame.origin.y,
+                            self.frame.size.width,
+                            textSize.height);
+    [self setNeedsDisplay];
+}
+
 - (void)autoResizeForHeight
 {
     CGSize textSize = [self.text sizeWithFont:self.font

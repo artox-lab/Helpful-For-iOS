@@ -10,6 +10,7 @@
 
 @interface UILabel (AutoResize)
 
+- (void)trimFreeSpace;
 - (void)autoResizeForHeight;
 - (void)autoResizeForWidth;
 
