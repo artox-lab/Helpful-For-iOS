@@ -35,4 +35,8 @@ Pod::Spec.new do |s|
   s.subspec "NSDictionary+URLParams" do |ms|
     ms.source_files =  "NSDictionary+URLParams"
   end
+  
+  s.subspec "UILabel+AutoResize" do |ms|
+    ms.source_files =  "UILabel+AutoResize"
+  end
 end

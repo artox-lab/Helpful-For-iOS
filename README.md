@@ -10,3 +10,5 @@ Helpful For iOS
 **NSDictionary+URLParams** - category for converting NSDictionary to NSString of URL params.
 
 **NSString+URLEncode** - category for encoding string as URL param.
+
+**UILabel+AutoResize** - category for autoresizing labels by width or height.
