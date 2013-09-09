@@ -22,6 +22,10 @@
         {
             [output appendString:@"+"];
         }
+        else if (thisChar == '/')
+        {
+            [output appendString:@"%252F"];
+        }
         else if (thisChar == '.' || thisChar == '-' || thisChar == '_' || thisChar == '~' ||
                  (thisChar >= 'a' && thisChar <= 'z') ||
                  (thisChar >= 'A' && thisChar <= 'Z') ||
