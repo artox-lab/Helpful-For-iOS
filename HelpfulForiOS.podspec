@@ -6,10 +6,10 @@
 #
 Pod::Spec.new do |s|
   s.name         = "HelpfulForiOS"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.author       = { "Ivanenko Dmitry" => "id.noxt@gmail.com" }
   s.source       = { :git => "https://github.com/noxt/Helpful-For-iOS" }
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
   
 
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
     ms.source_files =  "NSDictionary+URLParams"
   end
   
-  s.subspec "UILabel+AutoResize" do |ms|
-    ms.source_files =  "UILabel+AutoResize"
+  s.subspec "UILabel+Resize" do |ms|
+    ms.source_files =  "UILabel+Resize"
   end
 end

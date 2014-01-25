@@ -11,4 +11,4 @@ Helpful For iOS
 
 **NSString+URLEncode** - category for encoding string as URL param.
 
-**UILabel+AutoResize** - category for autoresizing labels by width or height.
+**UILabel+Resize** - category for autoresizing labels by width or height.
